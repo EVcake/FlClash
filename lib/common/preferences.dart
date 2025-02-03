@@ -26,12 +26,7 @@ class Preferences {
     final clashConfigString = preferences.getString(clashConfigKey);
     if (clashConfigString == null) return null;
     final clashConfigMap = json.decode(clashConfigString);
-    try {
-      return ClashConfig.fromJson(clashConfigMap);
-    } catch (e) {
-      debugPrint(e.toString());
-      return null;
-    }
+    return ClashConfig.fromJson(clashConfigMap);
   }
 
   Future<bool> saveClashConfig(ClashConfig clashConfig) async {
@@ -47,12 +42,7 @@ class Preferences {
     final configString = preferences.getString(configKey);
     if (configString == null) return null;
     final configMap = json.decode(configString);
-    try {
-      return Config.fromJson(configMap);
-    } catch (e) {
-      debugPrint(e.toString());
-      return null;
-    }
+    return Config.fromJson(configMap);
   }
 
   Future<bool> saveConfig(Config config) async {

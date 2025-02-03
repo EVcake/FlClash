@@ -27,11 +27,11 @@ Future<void> main() async {
   globalState.packageInfo = await PackageInfo.fromPlatform();
   final version = await system.version;
   final config = await preferences.getConfig() ?? Config();
+  final clashConfig = await preferences.getClashConfig() ?? ClashConfig();
   await AppLocalizations.load(
     other.getLocaleForString(config.appSetting.locale) ??
         WidgetsBinding.instance.platformDispatcher.locale,
   );
-  final clashConfig = await preferences.getClashConfig() ?? ClashConfig();
   await android?.init();
   await window?.init(config.windowProps, version);
   final appState = AppState(
