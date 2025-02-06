@@ -112,7 +112,7 @@ class _GeoDataListItemState extends State<GeoDataListItem> {
   }
 
   Future<FileInfo> _getGeoFileLastModified(String fileName) async {
-    final homePath = await appPath.getHomeDirPath();
+    final homePath = await appPath.homeDirPath;
     final file = File(join(homePath, fileName));
     final lastModified = await file.lastModified();
     final size = await file.length();

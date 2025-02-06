@@ -89,7 +89,7 @@ Future<void> _service(List<String> flags) async {
     await ClashCore.initGeo();
     globalState.packageInfo = await PackageInfo.fromPlatform();
     final clashConfig = await preferences.getClashConfig() ?? ClashConfig();
-    final homeDirPath = await appPath.getHomeDirPath();
+    final homeDirPath = await appPath.homeDirPath;
     await app?.tip(appLocalizations.startVpn);
     clashLibHandler
         .quickStart(

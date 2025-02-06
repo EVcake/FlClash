@@ -10,7 +10,7 @@ class Picker {
     final filePickerResult = await FilePicker.platform.pickFiles(
       withData: true,
       allowMultiple: false,
-      initialDirectory: await appPath.getDownloadDirPath(),
+      initialDirectory: await appPath.downloadDirPath,
     );
     return filePickerResult?.files.first;
   }
@@ -18,7 +18,7 @@ class Picker {
   Future<String?> saveFile(String fileName, Uint8List bytes) async {
     final path = await FilePicker.platform.saveFile(
       fileName: fileName,
-      initialDirectory: await appPath.getDownloadDirPath(),
+      initialDirectory: await appPath.downloadDirPath,
       bytes: Platform.isAndroid ? bytes : null,
     );
     if (!Platform.isAndroid && path != null) {
