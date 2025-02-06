@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "blacklistMode": MessageLookupByLibrary.simpleMessage("黑名单模式"),
         "bypassDomain": MessageLookupByLibrary.simpleMessage("排除域名"),
         "bypassDomainDesc": MessageLookupByLibrary.simpleMessage("仅在系统代理启用时生效"),
+        "cacheCorrupt": MessageLookupByLibrary.simpleMessage("缓存已损坏，是否清空？"),
         "cancel": MessageLookupByLibrary.simpleMessage("取消"),
         "cancelFilterSystemApp":
             MessageLookupByLibrary.simpleMessage("取消过滤系统应用"),

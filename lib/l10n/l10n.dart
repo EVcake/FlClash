@@ -3479,6 +3479,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `The cache is corrupt. Do you want to clear it?`
+  String get cacheCorrupt {
+    return Intl.message(
+      'The cache is corrupt. Do you want to clear it?',
+      name: 'cacheCorrupt',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

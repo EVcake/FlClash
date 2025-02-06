@@ -96,6 +96,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "bypassDomain": MessageLookupByLibrary.simpleMessage("Bypass domain"),
         "bypassDomainDesc": MessageLookupByLibrary.simpleMessage(
             "Only takes effect when the system proxy is enabled"),
+        "cacheCorrupt": MessageLookupByLibrary.simpleMessage(
+            "The cache is corrupt. Do you want to clear it?"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancelFilterSystemApp":
             MessageLookupByLibrary.simpleMessage("Cancel filter system app"),

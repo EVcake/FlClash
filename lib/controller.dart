@@ -344,7 +344,7 @@ class AppController {
     }
     final res = await globalState.showMessage(
       title: appLocalizations.tip,
-      message: TextSpan(text: "缓存已损坏，是否清空"),
+      message: TextSpan(text: appLocalizations.cacheCorrupt),
     );
     if (res) {
       final file = File(await appPath.sharedPreferencesPath);
