@@ -495,7 +495,7 @@ class AppController {
     }
     final isDisclaimerAccepted = await showDisclaimer();
     if (!isDisclaimerAccepted) {
-      handleExit();
+      await handleExit();
     }
     return;
   }
