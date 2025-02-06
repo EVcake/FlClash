@@ -92,7 +92,7 @@ class _AppStateManagerState extends State<AppStateManager>
   @override
   Widget build(BuildContext context) {
     return Listener(
-      onPointerDown: (_) {
+      onPointerHover: (_) {
         render?.resume();
       },
       child: _cacheStateChange(
