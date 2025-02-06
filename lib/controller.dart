@@ -346,15 +346,14 @@ class AppController {
       title: appLocalizations.tip,
       message: TextSpan(text: "缓存已损坏，是否清空"),
     );
-    if (!res) {
+    if (res) {
       final file = File(await appPath.sharedPreferencesPath);
       final isExists = await file.exists();
       if (isExists) {
         await file.delete();
       }
-      handleExit();
     }
-    handleExit();
+    await handleExit();
   }
 
   init() async {
